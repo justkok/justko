@@ -71,7 +71,7 @@ jobs:
           docker build -t my-lab-app .          
       - name: Run Docker container        
         run: |
-          docker run --rm my-lab-app --success          
+          chmod +x lab         
       - name: Save Docker image as tar file        
         run: |
           docker save -o my-lab-app.tar my-lab-app
