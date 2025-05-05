@@ -67,6 +67,7 @@ jobs:
           path: .
       - name: Build Docker image        
         run: |
+          chmod +x lab
           docker build -t my-lab-app .          
       - name: Run Docker container        
         run: |
