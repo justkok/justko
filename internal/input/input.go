@@ -5,7 +5,7 @@ import (
 	"fmt"
 	"os"
 )
-
+// this
 func Input() (string, error) {
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Print("Введите строку> ")
