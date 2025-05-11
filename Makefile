@@ -22,14 +22,16 @@ clean:
 
 # Сборка .deb пакета
 deb:
-	@echo "Сборка .deb пакета..."
-	mkdir -p myprogram/usr/bin
-	cp lab myprogram/usr/bin/lab
-	mkdir -p myprogram/DEBIAN
-	echo "Package: lab" > myprogram/DEBIAN/control
-	echo "Version: 1.0" >> myprogram/DEBIAN/control
-	echo "Architecture: amd64" >> myprogram/DEBIAN/control
-	echo "Maintainer: Your Name <your.email@example.com>" >> myprogram/DEBIAN/control
-	echo "Description: Программа для поиска максимального значения в массиве" >> myprogram/DEBIAN/control
-	dpkg-deb --build myprogram
-	rm -rf myprogram
+ @echo "Сборка .deb пакета..."
+ mkdir -p myprogram/usr/bun
+ mkdir -p myprogram/app
+ cp lab myprogram/usr/bun/lab
+ cp cmd/lab/input.txt myprogram/app/input.txt
+ mkdir -p myprogram/DEBIAN
+ echo "Package: lab" > myprogram/DEBIAN/control
+ echo "Version: 1.0" >> myprogram/DEBIAN/control
+ echo "Architecture: amd64" >> myprogram/DEBIAN/control
+ echo "Maintainer: admin <abcdrfj@mail.ru>" >> myprogram/DEBIAN/control
+ echo "Description: Программа для подсчета слов" >> myprogram/DEBIAN/control
+ dpkg-deb --build myprogram
+ rm -rf myprogram
